@@ -12,6 +12,7 @@ book:
   cover-image: "Cover/cover-artv3.png"
   chapters:
     - index.qmd
+    - Chapters/01-zig-weird-ru.qmd
     - references.qmd
 
 bibliography: references.bib
