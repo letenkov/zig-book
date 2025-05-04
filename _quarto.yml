@@ -4,12 +4,3 @@ project:
 profiles:
   - ru
   - en
-website:
-  navbar:
-    background: primary
-    search: true
-    left:
-      - text: "Home"
-        href: index.qmd
-      - talks.qmd
-      - about.qmd 
