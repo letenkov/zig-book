@@ -105,3 +105,36 @@ tree .
 [^zig-zon]: <https://zig.news/edyu/zig-package-manager-wtf-is-zon-558e>
 [^zig-zon2]: <https://medium.com/@edlyuu/zig-package-manager-2-wtf-is-build-zig-zon-and-build-zig-0-11-0-update-5bc46e830fc1>
 [^zig-zon-schema]: <https://github.com/ziglang/zig/blob/master/doc/build.zig.zon.md>
+
+### Файл `root.zig` {#sec-root-file}
+
+Давайте взглянем на файл `root.zig`.
+Вы могли заметить, что каждая строка кода с выражением заканчивается точкой с запятой (`;`).
+Это соответствует синтаксису языков программирования семейства C[^c-family].
+
+[^c-family]: <https://en.wikipedia.org/wiki/List_of_C-family_programming_languages>
+
+Также обратите внимание на вызов `@import()` в первой строке. Мы используем эту встроенную функцию для импорта функциональности из других модулей Zig в наш текущий модуль.
+Эта функция `@import()` работает аналогично препроцессору `#include`
+в C или C++, или оператору `import` в коде Python или Javascript.
+В этом примере мы импортируем модуль `std`, который предоставляет доступ к стандартной библиотеке Zig.
+
+В этом файле `root.zig` мы также можем увидеть, как в Zig выполняются присваивания (т.е. создание новых объектов).
+Вы можете создать новый объект в Zig, используя синтаксис
+`(const|var) name = value;`. В примере ниже мы создаем два константных
+объекта (`std` и `testing`). В @sec-assignments мы подробнее говорим об объектах в целом.
+
+```{zig}
+#| auto_main: false
+#| build_type: "ast"
+const std = @import("std");
+const testing = std.testing;
+
+export fn add(a: i32, b: i32) i32 {
+    return a + b;
+}
+```
+
+Функции в Zig объявляются с использованием ключевого слова `fn`.
+В этом модуле `root.zig` мы объявляем функцию под названием `add()`, которая имеет два аргумента с именами `a` и `b`.
+Функция возвращает целое число типа `i32` в качестве результата.
