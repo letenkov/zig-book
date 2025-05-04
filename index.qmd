@@ -1,186 +1,77 @@
----
-engine: knitr
-knitr: true
-syntax-definition: "./Assets/zig.xml"
----
+::: {.content-visible when-profile="ru"}
 
-```{r}
-#| include: false
-source("./zig_engine.R")
-knitr::opts_chunk$set(
-    auto_main = FALSE,
-    build_type = "run"
-)
-```
+# Добро пожаловать {.unnumbered}
 
+Добро пожаловать! Это HTML-версия книги "Введение в Zig: книга на основе проектов", автор — [Pedro Duarte Faria](https://pedro-faria.netlify.app/).
 
+Эта книга предоставляет введение в [язык программирования Zig](https://ziglang.org/) — современный низкоуровневый язык для создания надёжного и производительного ПО.
 
-::: {.content-visible when-format="html"}
+## Поддержка проекта {.unnumbered}
 
-# Welcome {.unnumbered}
-
-Welcome! This is the initial page for the "Open Access" HTML version of the book "Introduction to Zig: a project-based book",
-written by [Pedro Duarte Faria](https://pedro-faria.netlify.app/).
-This is an open book that provides an introduction to the [Zig programming language](https://ziglang.org/),
-which is a new general-purpose, and low-level language for building robust and optimal software.
-
-## Support the project! {.unnumbered}
-
-If you like this project, and you want to support it, you can buy a PDF, eBook or a physical copy
-of the book, either at Amazon, or at Leanpub:
+Если вам понравился проект, вы можете поддержать его, купив PDF, eBook или печатную версию книги на Amazon или Leanpub:
 
 {{< include ./Assets/button.html >}}
 
 {{< include ./Assets/leanpub-button.html >}}
 
+## О книге {.unnumbered}
 
-### Sending donations directly
+Это техническая и вводная книга с открытым исходным кодом, посвящённая языку Zig. Она предназначена как для начинающих, так и для опытных разработчиков. Вы изучите Zig на основе практических проектов, таких как:
 
-You can also donate some amount directly to the author of the project via:
+- Кодировщик/декодер Base64
+- HTTP-сервер
+- Фильтр изображений
 
-- PayPal Donation.
-- Revolut.
+Вы узнаете:
+- Синтаксис языка и сравнение с C/C++/Rust
+- Структуры данных, аллокаторы памяти, файловую систему и ввод-вывод
+- Обращение с null через Optionals
+- Отладку и тестирование
+- Обработку ошибок как значений
+- Сборку проектов на Zig и C
+- Параллелизм с потоками и SIMD
 
-These are good ways to support directly the author of the project, which helps to foster
-more contents like this, and it makes possible for the author to keep writing helpful tools and
-materials for the community.
+## Об авторе {.unnumbered}
 
-### PayPal
-
-{{< include ./Assets/paypal-button.html >}}
-
-### Revolut
-
-You can send money via Swift Payment with the following bank and Swift details:
-
-```
-Recipient: Pedro Duarte Faria
-BIC/SWIFT Code: REVOSGS2
-Account number: 6124512226
-Name and address of the bank: Revolut Technologies Singapore Pte. Ltd, 6 Battery Road, Floor 6-01, 049909, Singapore, Singapore
-Corresponding BIC: CHASGB2L
-```
-
-If you do have a Revolut account, you can scan the following QR code:
-
-{{< include ./Assets/revolut-button.html >}}
+Педру Дуарте Фария — старший инженер по данным в [DSM-Firmenich](https://www.dsm-firmenich.com). Он сертифицирован Databricks и имеет степень бакалавра экономики. Подробнее: [сайт автора](https://pedro-faria.netlify.app/).
 
 :::
 
+::: {.content-visible when-profile="en"}
+
+# Welcome {.unnumbered}
+
+Welcome! This is the HTML version of the book "Introduction to Zig: a project-based book", written by [Pedro Duarte Faria](https://pedro-faria.netlify.app/).
+
+This book introduces the [Zig programming language](https://ziglang.org/), a modern low-level programming language focused on safety and performance.
+
+## Support the project! {.unnumbered}
+
+If you like this project, you can support it by buying a PDF, eBook, or physical copy from Amazon or Leanpub:
+
+{{< include ./Assets/button.html >}}
+
+{{< include ./Assets/leanpub-button.html >}}
 
 ## About this book {.unnumbered}
 
-This an open (i.e., open-source), technical and introductory book for the [Zig programming language](https://ziglang.org/),
-which is a new general purpose, and low-level programming language for building optimal and robust software.
+This open-source technical book is aimed at both beginners and experienced developers. You will explore Zig through practical projects like:
 
-Official repository of the book: <https://github.com/pedropark99/zig-book>.
+- A Base64 encoder/decoder
+- An HTTP Server
+- An image filter
 
-This book is designed for both beginners and experienced developers. It explores the exciting world of Zig through small
-and simple projects (in a similar style to the famous "Python Crash Course" book from Eric Matthes).
-Some of these projects are: a Base64 encoder/decoder, a HTTP Server and an image filter.
-
-As you work through the book, you will learn:
-
-- The syntax of the language, and how it compares to C, C++ and Rust.
-- Data structures, memory allocators, filesystem and I/O.
-- Optionals as a new paradigm to handle nullability.
-- How to test and debug a Zig application.
-- Errors as values, and how to handle them.
-- How to build C and Zig code with the build system that is embedded into the language.
-- Zig interoperability with C.
-- Parallelism with threads and SIMD.
-- And more.
-
+You will learn:
+- The Zig syntax and comparison with C, C++, and Rust
+- Data structures, memory allocators, filesystem, and I/O
+- Optionals for null safety
+- Testing and debugging Zig applications
+- Error handling as values
+- Zig's build system and C interoperability
+- Parallelism with threads and SIMD
 
 ## About the author {.unnumbered}
 
-Pedro Duarte Faria has a bachelor's degree in Economics from the Federal University of Ouro Preto - Brazil.
-Currently, he is a Senior Data Engineer at [DSM-Firmenich](https://www.dsm-firmenich.com)[^dsm], and
-a Databricks Certified Associate Developer for Apache Spark 3.0.
+Pedro Duarte Faria is a Senior Data Engineer at [DSM-Firmenich](https://www.dsm-firmenich.com) and a Databricks Certified Spark Developer. He holds a Bachelor's degree in Economics. Learn more: [author's website](https://pedro-faria.netlify.app/)
 
-[^dsm]: <https://www.dsm-firmenich.com>
-
-
-The author has more than 4 years of experience in the data industry, developing data products, pipelines,
-reports and analysis for research institutions and some of the largest companies in the
-Brazilian financial sector, such as the BMG Bank, Sodexo and Pan Bank.
-
-But Pedro is also a passionate software developer who loves to learn and teach about programming.
-Although Pedro uses many different languages in his work, he is specialized in the R programming language, and have given several
-lectures and courses about it, inside graduate centers (such as PPEA-UFOP^[<https://ppea.ufop.br/>]),
-in addition to federal and state organizations (such as FJP-MG^[<http://fjp.mg.gov.br/>]).
-
-
-Personal Website: <https://pedro-faria.netlify.app/>
-
-Linkedin: <https://www.linkedin.com/in/pedro-faria-a68140209/>
-
-Mastodon: [\@pedropark99\@fosstodon.org](https://fosstodon.org/@pedropark99)
-
-Twitter (X): [\@PedroPark9](https://twitter.com/PedroPark9)
-
-## License {.unnumbered}
-
-Copyright © 2025 Pedro Duarte Faria. This book is licensed by the [CC-BY 4.0 Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/)[^cc-license].
-
-[^cc-license]: <https://creativecommons.org/licenses/by/4.0/>
-
-![](Figures/creative-commoms-88x31.png){width=88px}
-
-
-## Book compilation metadata {.unnumbered}
-
-This book was compiled using the following versions of [Zig](https://ziglang.org) and [Quarto](https://quarto.org):
-
-```{r}
-#| echo: false
-#| results: 'asis'
-source("./Scripts/zig-quarto-versions.R")
-```
-
-## Book citation {.unnumbered}
-
-You can use the following BibTex entry to cite this book:
-
-```
-@book{pedro2024,
-    author = {Pedro Duarte Faria},
-    title = {Introduction to Zig},
-    subtitle = {a project-based book},
-    month = {October},
-    edition = {1},
-    year = {2024},
-    address = {Belo Horizonte},
-    url = {https://github.com/pedropark99/zig-book}
-}
-```
-
-## Corresponding author and maintainer {.unnumbered}
-
-Pedro Duarte Faria
-
-Contact: [pedropark99\@gmail.com](mailto:pedropark99@gmail.com)
-
-Personal website: <https://pedro-faria.netlify.app/>
-
-
-## Acknowledgments {.unnumbered}
-
-This book is also a product of many conversations and exchanges that we had
-with different people from the Zig community. I (Pedro Duarte Faria) am incredibly
-grateful for these conversations, and also, for some direct contributions that we
-had. Below we have a list of the people involved (name of the person with their usename in GitHub):
-
-```{r}
-#| echo: false
-#| results: "asis"
-c <- read.csv("contributors.txt")
-n <- nrow(c)
-user_names <- sprintf("(%s)", c$user_name)
-user_names <- gsub("@", "\\\\@", user_names)
-vec <- vector("character", n)
-for (i in seq_len(n)) {
-    vec[i] <- paste(c$name[i], user_names[i])
-}
-cat(paste(vec, collapse = ", "), sep = "\n")
-```
+:::
