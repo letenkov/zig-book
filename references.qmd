@@ -17,9 +17,23 @@ knitr::opts_chunk$set(
 
 ::::: {.content-visible when-format="html"}
 
+
+:::: {.content-visible when-profile=“ru”}
+
+# Список литературы {.unnumbered}
+
+::: {#refs}
+:::
+
+::::
+
+:::: {.content-visible when-profile=“en”}
+
 # References {.unnumbered}
 
 ::: {#refs}
 :::
+
+::::
 
 :::::
